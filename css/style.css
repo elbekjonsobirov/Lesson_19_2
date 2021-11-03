@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: rgb(114, 116, 116);
+    align-items: center;
+    padding: 0 200px;
+    animation-name: divContainer;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+.div1 {
+    position: absolute;
+    z-index: 1;
+    width: 0px;
+    height: 0px;
+    animation-name: divAnimation;   
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.div2 {
+    position: absolute;
+    z-index: 2;
+    width: 0px;
+    height: 0px;
+    animation-name: divAnimation;   
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.66s;
+}
+
+.div3 {
+    position: absolute;
+    z-index: 3;
+    width: 0px;
+    height: 0px;
+    animation-name: divAnimation;   
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1.33s;
+}
+
+@keyframes divAnimation {
+    from {
+        transform: scale(0.1);
+        border: 20px solid white;
+        border-radius: 10px;
+    }
+    to {
+        border: 20px solid rgba(255, 255, 255, 0);
+        border-radius: 200px;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes divContainer {
+    from {
+
+    }
+
+    to {
+        justify-content: end;
+    }
+}
